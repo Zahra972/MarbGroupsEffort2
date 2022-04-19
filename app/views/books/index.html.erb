@@ -1,0 +1,18 @@
+<nav class="nav nav-pills nav-justified">
+  <a class="nav-item nav-link active" href="#">Home</a>
+  <a class="nav-item nav-link" <%= link_to "New books", new_book_path %> </a>
+ 
+</nav>
+<p style="color: green"><%= notice %></p>
+
+<h1>Books List Application</h1>
+<h4> Its a simple application that allows you to perform crud operations</h4>
+
+<div id="books">
+
+  <% @books.each do |book| %>
+    <%= render book %>
+    
+  <% end %>
+</div>
+
